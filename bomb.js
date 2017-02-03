@@ -23,6 +23,7 @@ function gameOver(){
   document.getElementsByTagName("body")[0].classList.remove("unexploded");
   document.getElementsByTagName("body")[0].classList.add("exploded");
   clearInterval(interval);
+
 }
 
 
