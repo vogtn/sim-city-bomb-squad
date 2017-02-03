@@ -1,0 +1,20 @@
+body{
+  text-align: center;
+  background-repeat: no-repeat;
+}
+#timer{
+    color: green;
+}
+#box{
+  display: inline-block;
+  margin: 10%;
+  width: 300px;
+  height: 400px;
+  background-color: black;
+}
+.unexploded{
+  background-image: url(./img/simcity.jpg);
+}
+.exploded{
+  background-image: url(./img/explosion.jpg);
+}

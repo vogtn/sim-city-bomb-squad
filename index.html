@@ -7,5 +7,18 @@
     <script src="bomb.js"></script>
   </head>
   <body class="unexploded">
+    <div id="box">
+      <h2 id="timer">30</h2>
+      <div id="wires">
+        <img id="blue-wire" src="./img/uncut-blue-wire.png" onClick="cutWire(this)"></img>
+        <img id="green-wire" src="./img/uncut-green-wire.png" onClick="cutWire(this)"></img>
+        <img id="red-wire" src="./img/uncut-red-wire.png" onClick="cutWire(this)"></img>
+        <img id="white-wire" src="./img/uncut-white-wire.png" onClick="cutWire(this)"></img>
+        <img id="yellow-wire" src="./img/uncut-yellow-wire.png" onClick="cutWire(this)"></img>
+      </div>
+      <div>
+        <button id="reset" onClick="reset()">start/reset</button>
+      </div>
+    </div>
   </body>
 </html>
