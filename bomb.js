@@ -2,10 +2,7 @@ var time= 30; //My display in seconds
 var interval;
 var wireColors = ["blue-wire", "green-wire", "white-wire", "red-wire", "yellow-wire"];
 var successWire = null;
-
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOM loaded");
-});
+var mistake = null;
 
 function tick(){
   time--;
@@ -25,12 +22,15 @@ function gameOver(){
   //add an exploded class to the body
   document.getElementsByTagName("body")[0].classList.remove("unexploded");
   document.getElementsByTagName("body")[0].classList.add("exploded");
+  clearInterval(interval);
 }
+
 
 function reset(){
   clearInterval(interval);
   time = 31;
   interval = setInterval(tick, 1000);
+  mistake = 0;
 
   function getGoodWire(){
     return getRandomInt(0,4);
@@ -59,6 +59,10 @@ function cutWire(param){
     alert('win!');
     reset();
   }else{
+    mistake++;
     console.log('wrong!');
+  }
+  if(mistake == 3){
+    gameOver();
   }
 }
